@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,12 +17,13 @@ namespace SecretNumberGame
 
 
 
-            int number=0, answer = 5,i=0;
-            
+            int number=0, answer = 0,i=0;
 
-            Console.Write("Player 1 enter number :");
-           answer = int.Parse(Console.ReadLine());
-            Console.Clear();
+            Random rd = new Random();
+
+            Console.WriteLine("Start Game :(Guess Number between 0 and 100)");
+           answer = rd.Next(0,100);
+           
             while (number != answer)
             {
                 Console.Write("Please guess number : ");
